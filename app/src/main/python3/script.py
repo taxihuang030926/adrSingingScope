@@ -4,4 +4,4 @@ def main(number1, number2):
 
     summ = num1 + num2
 
-    return "sum is" + str(summ)
+    return "sum is " + str(summ)
