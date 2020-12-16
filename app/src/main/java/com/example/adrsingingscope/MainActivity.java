@@ -14,9 +14,9 @@ import com.chaquo.python.android.AndroidPlatform;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText Et1,Et2;
-    Button Btn;
-    TextView tv;
+    private EditText Et1,Et2;
+    private Button Btn, Bt4next_page;
+    private TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Et1 = (EditText)findViewById(R.id.et1);
         Et2 = (EditText)findViewById(R.id.et2);
         Btn = (Button)findViewById(R.id.btn);
+        Bt4next_page = (Button)findViewById(R.id.bt4next_page);
         tv = (TextView)findViewById(R.id.text_view);
-
+/*
         if(!Python.isStarted()){
             Python.start(new AndroidPlatform(this));
         }
@@ -46,7 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
                 //code complete
             }
+        }); */
+
+        Bt4next_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRecordTestPage();
+            }
         });
 
+    }
+    public void openRecordTestPage(){
+        Intent intent = new Intent(this, recording_and_play_test.class);
+        startActivity(intent);
     }
 }
