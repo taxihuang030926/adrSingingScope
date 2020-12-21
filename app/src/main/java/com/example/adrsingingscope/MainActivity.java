@@ -53,12 +53,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openRecordTestPage();
+                //tap to switch to record and play test UI
             }
         });
 
     }
+
     public void openRecordTestPage(){
         Intent intent = new Intent(this, recording_and_play_test.class);
         startActivity(intent);
+        //give function to openRecordTestPage() for switching to record_and_play_test
     }
 }
