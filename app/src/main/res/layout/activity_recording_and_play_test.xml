@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version = "1.0" encoding= "utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,14 +17,32 @@
         android:padding="20dp"/>
 
     <Button
+        android:id="@+id/play_btn"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:id="@+id/play_button"
-        android:text="play"
-        android:layout_="@+id/record_button"
+        android:text="Tap to Play"
+        android:padding="20dp"
         android:layout_toRightOf="@+id/record_button"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/stop_record_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_button"
+        android:layout_alignLeft="@+id/record_button"
+        android:padding="20dp"
+        android:text="Stop recording" />
+
+    <Button
+        android:id="@+id/pause_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_btn"
         android:layout_margin="20dp"
-        android:padding="20dp"/>
+        android:layout_toRightOf="@+id/stop_record_btn"
+        android:padding="20dp"
+        android:text="Tap to stop" />
 
 
 </RelativeLayout>
